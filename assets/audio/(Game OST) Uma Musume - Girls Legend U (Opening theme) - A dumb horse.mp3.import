@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cw1gyabudiqqg"
+path="res://.godot/imported/(Game OST) Uma Musume - Girls Legend U (Opening theme) - A dumb horse.mp3-7c8ada2f55850385cdc3660086cd5f9b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/(Game OST) Uma Musume - Girls Legend U (Opening theme) - A dumb horse.mp3"
+dest_files=["res://.godot/imported/(Game OST) Uma Musume - Girls Legend U (Opening theme) - A dumb horse.mp3-7c8ada2f55850385cdc3660086cd5f9b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

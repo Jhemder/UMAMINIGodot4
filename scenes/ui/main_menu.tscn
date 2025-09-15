@@ -1,0 +1,232 @@
+[gd_scene load_steps=18 format=3 uid="uid://dxtf2p7n5vpun"]
+
+[ext_resource type="Script" uid="uid://cird8nfxiqno3" path="res://scripts/MainMenu.gd" id="1_x2yvf"]
+[ext_resource type="Texture2D" uid="uid://crxvogiusfi5e" path="res://assets/ui/Button_1.png" id="2_m1kxf"]
+[ext_resource type="FontFile" uid="uid://62s6pcebxgid" path="res://assets/fonts/Kenney Blocks.ttf" id="3_x2yvf"]
+[ext_resource type="Texture2D" uid="uid://5ejphdmyr78q" path="res://assets/ui/PanelButton.png" id="4_uhagc"]
+[ext_resource type="Texture2D" uid="uid://csxlfd8gfndk7" path="res://assets/sprites/fondomenu.png" id="6_btxxm"]
+[ext_resource type="AudioStream" uid="uid://c38q8wn47gpfi" path="res://assets/audio/ウマ娘ガチャBGM(GIRLS' LEGEND U) - アグネスデジ太郎.mp3" id="6_uhagc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btxxm"]
+texture = ExtResource("2_m1kxf")
+modulate_color = Color(0.91, 0.55783, 0.5187, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wb0q5"]
+texture = ExtResource("2_m1kxf")
+modulate_color = Color(0.746157, 0.493562, 0.464138, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q85j6"]
+texture = ExtResource("2_m1kxf")
+modulate_color = Color(1, 0.96, 0.96, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb0q5"]
+atlas = ExtResource("6_btxxm")
+region = Rect2(0, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q85j6"]
+atlas = ExtResource("6_btxxm")
+region = Rect2(480, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g5eo"]
+atlas = ExtResource("6_btxxm")
+region = Rect2(960, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7suek"]
+atlas = ExtResource("6_btxxm")
+region = Rect2(1440, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otr3d"]
+atlas = ExtResource("6_btxxm")
+region = Rect2(0, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ekit"]
+atlas = ExtResource("6_btxxm")
+region = Rect2(480, 270, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4uci"]
+atlas = ExtResource("6_btxxm")
+region = Rect2(960, 270, 480, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_877pj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wb0q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q85j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8g5eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7suek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otr3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ekit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4uci")
+}],
+"loop": true,
+"name": &"Menu",
+"speed": 5.0
+}]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2yvf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(600, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -255.0
+offset_right = 220.0
+offset_bottom = 545.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+
+[node name="Titulo" type="NinePatchRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("2_m1kxf")
+patch_margin_left = 31
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 9
+
+[node name="Label" type="Label" parent="VBoxContainer/Titulo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 40
+text = "UMAMINI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Botones" type="NinePatchRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(60, 350)
+layout_mode = 2
+texture = ExtResource("4_uhagc")
+region_rect = Rect2(0, 0, 38, 38)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Botones"]
+custom_minimum_size = Vector2(20, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -83.0
+offset_right = 55.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="play" type="Button" parent="VBoxContainer/Botones/VBoxContainer"]
+custom_minimum_size = Vector2(110, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.987843, 0.935169, 0.916069, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_btxxm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wb0q5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q85j6")
+text = "Jugar"
+
+[node name="umas" type="Button" parent="VBoxContainer/Botones/VBoxContainer"]
+custom_minimum_size = Vector2(110, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.987843, 0.935169, 0.916069, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_btxxm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wb0q5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q85j6")
+text = "coleccion"
+
+[node name="settings" type="Button" parent="VBoxContainer/Botones/VBoxContainer"]
+custom_minimum_size = Vector2(110, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.987843, 0.935169, 0.916069, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_btxxm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wb0q5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q85j6")
+text = "opciones"
+
+[node name="shop" type="Button" parent="VBoxContainer/Botones/VBoxContainer"]
+custom_minimum_size = Vector2(110, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.987843, 0.935169, 0.916069, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_btxxm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wb0q5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q85j6")
+text = "tienda"
+
+[node name="exit" type="Button" parent="VBoxContainer/Botones/VBoxContainer"]
+custom_minimum_size = Vector2(110, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.987843, 0.935169, 0.916069, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_btxxm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wb0q5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q85j6")
+text = "salir"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uhagc")
+autoplay = true
+parameters/looping = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+z_index = -1
+texture_filter = 1
+position = Vector2(959.5, 543.5)
+scale = Vector2(3.99792, 4.03333)
+sprite_frames = SubResource("SpriteFrames_877pj")
+animation = &"Menu"
+frame_progress = 0.0732109
+
+[connection signal="button_down" from="VBoxContainer/Botones/VBoxContainer/play" to="." method="_on_play_button_down"]
+[connection signal="button_down" from="VBoxContainer/Botones/VBoxContainer/umas" to="." method="_on_umas_button_down"]
+[connection signal="button_down" from="VBoxContainer/Botones/VBoxContainer/settings" to="." method="_on_settings_button_down"]
+[connection signal="button_down" from="VBoxContainer/Botones/VBoxContainer/shop" to="." method="_on_shop_button_down"]
+[connection signal="button_down" from="VBoxContainer/Botones/VBoxContainer/exit" to="." method="_on_exit_button_down"]

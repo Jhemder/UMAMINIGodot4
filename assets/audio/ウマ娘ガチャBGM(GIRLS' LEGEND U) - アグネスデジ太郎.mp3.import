@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c38q8wn47gpfi"
+path="res://.godot/imported/ウマ娘ガチャBGM(GIRLS' LEGEND U) - アグネスデジ太郎.mp3-9e4fb224c8850552a9aea91d5026df66.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/ウマ娘ガチャBGM(GIRLS' LEGEND U) - アグネスデジ太郎.mp3"
+dest_files=["res://.godot/imported/ウマ娘ガチャBGM(GIRLS' LEGEND U) - アグネスデジ太郎.mp3-9e4fb224c8850552a9aea91d5026df66.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
