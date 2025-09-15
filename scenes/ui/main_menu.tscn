@@ -223,7 +223,7 @@ position = Vector2(959.5, 543.5)
 scale = Vector2(3.99792, 4.03333)
 sprite_frames = SubResource("SpriteFrames_877pj")
 animation = &"Menu"
-frame_progress = 0.0732109
+frame_progress = 0.566696
 
 [connection signal="button_down" from="VBoxContainer/Botones/VBoxContainer/play" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="VBoxContainer/Botones/VBoxContainer/umas" to="." method="_on_umas_button_down"]

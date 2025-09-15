@@ -15,11 +15,19 @@ run/main_scene="uid://dxtf2p7n5vpun"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+
+[editor]
+
+version_control/autoload_on_startup=true
 
 [rendering]
 

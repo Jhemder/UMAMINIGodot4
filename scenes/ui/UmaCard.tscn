@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://umacard"]
+
+[ext_resource type="Texture2D" uid="uid://dp2g1stdg35tg" path="res://assets/sprites/agnes.png" id="1_agnes"]
+[ext_resource type="FontFile" uid="uid://62s6pcebxgid" path="res://assets/fonts/Kenney Blocks.ttf" id="2_font"]
+[ext_resource type="Texture2D" uid="uid://5ejphdmyr78q" path="res://assets/ui/PanelButton.png" id="3_panel"]
+
+[node name="UmaCard" type="Control"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Fondo" type="NinePatchRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_panel")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Imagen" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_agnes")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Nombre" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.85
+anchor_right = 0.5
+anchor_bottom = 0.85
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+text = "Agnes"
+horizontal_alignment = 1
+vertical_alignment = 1
